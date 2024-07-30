@@ -1,0 +1,6 @@
+(library
+  (name test_yosqlite)
+  (inline_tests)
+  (libraries
+     yosqlite)
+  (preprocess (pps ppx_inline_test)))

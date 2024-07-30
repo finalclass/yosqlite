@@ -1,0 +1,9 @@
+(library
+ (name yosqlite)
+ (public_name yosqlite)
+ (libraries
+   sqlite3
+   base
+   yojson
+ )
+)

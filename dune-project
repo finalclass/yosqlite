@@ -26,6 +26,7 @@
    (base (= v0.17.1))
    (yojson (= 2.2.2))
    (ppx_inline_test (= v0.17.0))
+   (ppx_deriving_yojson (= 3.9.0))
  )
  (tags
   (topics "to describe" your project)))

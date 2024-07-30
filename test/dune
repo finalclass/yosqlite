@@ -1,6 +1,13 @@
 (library
   (name test_yosqlite)
   (inline_tests)
+  (modules
+    test_yosqlite
+    test_ppx
+  )
   (libraries
-     yosqlite)
-  (preprocess (pps ppx_inline_test)))
+    yosqlite
+    yojson
+    ppx_deriving_yojson.runtime
+  )
+  (preprocess (pps ppx_inline_test ppx_deriving_yojson)))

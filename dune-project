@@ -17,8 +17,8 @@
 
 (package
  (name yosqlite)
- (synopsis "A short synopsis")
- (description "A longer description")
+ (synopsis "Simple Sqlite3. Yojson+Sqlite3 amalgamation")
+ (description "Convenience functions for working with Sqlite3 library")
  (depends
    ocaml
    dune
@@ -26,9 +26,9 @@
    (base (= v0.17.1))
    (yojson (= 2.2.2))
    (ppx_inline_test (= v0.17.0))
-   (ppx_deriving_yojson (= 3.9.0))
+   (ppx_deriving_yojson (= 3.8.0))
  )
  (tags
-  (topics "to describe" your project)))
+  (sqlite3 sqlite database)))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html

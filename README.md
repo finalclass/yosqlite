@@ -7,9 +7,9 @@ There are four functions in the library:
 - execute
 - fetch
 
-`db_open` and `db_close` are taken straight from (Sqlite3)[https://mmottl.github.io/sqlite3-ocaml/api/sqlite3/Sqlite3/] package. You could even use your own Sqlite3 db handle, these are just added for convenience.
+`db_open` and `db_close` are taken straight from [Sqlite3](https://mmottl.github.io/sqlite3-ocaml/api/sqlite3/Sqlite3/) package. You could even use your own Sqlite3 db handle, these are just added for convenience.
 
-`fetch` is like `execute` but returns list of Yojson `\`Assoc`
+`fetch` is like `execute` but returns list of Yojson ``Assoc`
 
 This is how you would tipically use the package:
 

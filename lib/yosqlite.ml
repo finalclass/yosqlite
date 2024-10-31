@@ -7,6 +7,7 @@ let db_close = Sqlite3.db_close
 type binding =
   [ `Null
   | `Int of int
+  | `Bool of bool
   | `Float of float
   | `String of string ]
 
@@ -22,6 +23,7 @@ open struct
            ( match b with
            | `Null -> bind stmt (i + 1) Data.NULL
            | `Int int -> bind stmt (i + 1) (Data.INT (Int64.of_int int))
+           | `Bool b -> bind stmt (i + 1) (Data.BOOL b)
            | `Float float -> bind stmt (i + 1) (Data.FLOAT float)
            | `String str -> bind stmt (i + 1) (Data.TEXT str) )
            |> ignore ) ;
@@ -59,6 +61,7 @@ let fetch ?(bind : binding list option) ~(sql : string) (db : Sqlite3.db) :
                 | INT int -> (name, `Int (int |> Int.of_int64_exn))
                 | FLOAT f -> (name, `Float f)
                 | TEXT text -> (name, `String text)
+                | BOOL b -> (name, `Bool b)
                 | BLOB text -> (name, `String text)
               in
               entry :: acc )
